@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+	int a[1000],num,i;
+	string 1,2,3;
+	printf("Enter the number\n");
+	scanf("%d",&num);
+	
+}
+				
+	
