@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int n,num[1000],total=0,avg=0;
+	printf("Enter total numbers\n");
+	scanf("%d",&n);
+	if(n>0)
+	{
+	    for(int i=1;i<=n;i++)
+	    {   
+	        
+	        printf("Enter the values for num\n");
+	        scanf("%d",&num[n]);
+	        total +=num[n];
+	    }
+	        
+	        avg = total/n;
+	        printf("Sum :%d\n",total);
+	        printf("Average:%d\n",avg);  
+    	
+	}
+	else
+	printf("Invalid Input\n");
+	return 0;
+}
