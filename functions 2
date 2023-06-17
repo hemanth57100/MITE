@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+void greet(char user[],char gender){
+    char *title;
+    if(gender=='f'||gender=='F')
+     strcpy(title,"Ms.");
+    else if(gender=='m'||gender=='M')
+     strcpy(title,"Mr.");
+    printf("Good morning %s%s!\n",title,user);
+    printf("Enjoy learning\n");
+}
+int main()
+{
+   char **names;
+   char *gender;
+   int len;
+   printf("Enter number of students\n");
+   scanf("%d",&len);
+   names=(char**)malloc(sizeof(char*)*len);
+   gender=(char*)malloc(sizeof(char)*(len+1));
+   for(int i=0;i<len;i++){
+    names[i]=(char*)malloc(sizeof(char)* 21);
+    scanf("%s %c",names[i],&gender[i]);
+   }
+   for(int i=0;i<len;i++){
+       greet(names[i],gender[i]);
+   }
+   return 0;
+}
