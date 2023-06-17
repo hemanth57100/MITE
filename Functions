@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+   void greet(char[],char);
+   printf("Hello world \n");
+   greet("Bharath",'M');
+   printf("Adithi is intelligent\n");
+   greet("Varsha",'F');
+   greet("Sharath",'f');
+   return 0;
+}
+void greet(char user[],char gender){
+    char title[4];
+    if(gender=='f'||gender=='F')
+     strcpy(title,"Ms.");
+    else
+     strcpy(title,"Mr.");
+    printf("Good morning %s%s!\n",title,user);
+    printf("Enjoy learning\n");
+}
